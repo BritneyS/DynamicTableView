@@ -6,12 +6,15 @@
 //  Copyright © 2019 Britney Smith. All rights reserved.
 //
 
-
 import UIKit
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    var wordArray: [String] {
+        return "The quick brown fox jumps over the lazy dog".components(separatedBy: .whitespaces).map { $0 }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +26,7 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return wordArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
