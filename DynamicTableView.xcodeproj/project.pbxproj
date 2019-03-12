@@ -77,8 +77,10 @@
 		0601DDF62238323B00CFBDE3 /* DynamicTableView */ = {
 			isa = PBXGroup;
 			children = (
+				0601DE19223836BD00CFBDE3 /* Controllers */,
+				0601DE18223836B500CFBDE3 /* Views */,
+				0601DE17223836A000CFBDE3 /* Models */,
 				0601DDF72238323B00CFBDE3 /* AppDelegate.swift */,
-				0601DDF92238323B00CFBDE3 /* ViewController.swift */,
 				0601DDFB2238323B00CFBDE3 /* Main.storyboard */,
 				0601DDFE2238323C00CFBDE3 /* Assets.xcassets */,
 				0601DE002238323C00CFBDE3 /* LaunchScreen.storyboard */,
@@ -94,6 +96,28 @@
 				0601DE0E2238323C00CFBDE3 /* Info.plist */,
 			);
 			path = DynamicTableViewTests;
+			sourceTree = "<group>";
+		};
+		0601DE17223836A000CFBDE3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0601DE18223836B500CFBDE3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0601DE19223836BD00CFBDE3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0601DDF92238323B00CFBDE3 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
