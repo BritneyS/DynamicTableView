@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        registerDynamicTableViewCell()
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -25,12 +26,22 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
+    func registerDynamicTableViewCell() {
+        let cell = UINib(nibName: "DynamicTableViewCell", bundle: nil)
+        tableView.register(cell, forCellReuseIdentifier: "DynamicTableViewCell")
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return wordArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DynamicTableViewCell", for: indexPath) as? DynamicTableViewCell else {
+            fatalError("Fatal error: No cell")
+        }
+        
+        cell.wordLabel.text = wordArray[indexPath.row]
+        return cell
     }
     
     
