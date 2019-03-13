@@ -13,6 +13,8 @@
 		0601DDFF2238323C00CFBDE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0601DDFE2238323C00CFBDE3 /* Assets.xcassets */; };
 		0601DE022238323C00CFBDE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0601DE002238323C00CFBDE3 /* LaunchScreen.storyboard */; };
 		0601DE0D2238323C00CFBDE3 /* DynamicTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0601DE0C2238323C00CFBDE3 /* DynamicTableViewTests.swift */; };
+		0601DE1C22383C1E00CFBDE3 /* DynamicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0601DE1A22383C1E00CFBDE3 /* DynamicTableViewCell.swift */; };
+		0601DE1D22383C1E00CFBDE3 /* DynamicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0601DE1B22383C1E00CFBDE3 /* DynamicTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		0601DE082238323C00CFBDE3 /* DynamicTableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicTableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0601DE0C2238323C00CFBDE3 /* DynamicTableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicTableViewTests.swift; sourceTree = "<group>"; };
 		0601DE0E2238323C00CFBDE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0601DE1A22383C1E00CFBDE3 /* DynamicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicTableViewCell.swift; sourceTree = "<group>"; };
+		0601DE1B22383C1E00CFBDE3 /* DynamicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DynamicTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +81,10 @@
 		0601DDF62238323B00CFBDE3 /* DynamicTableView */ = {
 			isa = PBXGroup;
 			children = (
+				0601DE19223836BD00CFBDE3 /* Controllers */,
+				0601DE18223836B500CFBDE3 /* Views */,
+				0601DE17223836A000CFBDE3 /* Models */,
 				0601DDF72238323B00CFBDE3 /* AppDelegate.swift */,
-				0601DDF92238323B00CFBDE3 /* ViewController.swift */,
 				0601DDFB2238323B00CFBDE3 /* Main.storyboard */,
 				0601DDFE2238323C00CFBDE3 /* Assets.xcassets */,
 				0601DE002238323C00CFBDE3 /* LaunchScreen.storyboard */,
@@ -94,6 +100,30 @@
 				0601DE0E2238323C00CFBDE3 /* Info.plist */,
 			);
 			path = DynamicTableViewTests;
+			sourceTree = "<group>";
+		};
+		0601DE17223836A000CFBDE3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0601DE18223836B500CFBDE3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0601DE1A22383C1E00CFBDE3 /* DynamicTableViewCell.swift */,
+				0601DE1B22383C1E00CFBDE3 /* DynamicTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0601DE19223836BD00CFBDE3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0601DDF92238323B00CFBDE3 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0601DE022238323C00CFBDE3 /* LaunchScreen.storyboard in Resources */,
+				0601DE1D22383C1E00CFBDE3 /* DynamicTableViewCell.xib in Resources */,
 				0601DDFF2238323C00CFBDE3 /* Assets.xcassets in Resources */,
 				0601DDFD2238323B00CFBDE3 /* Main.storyboard in Resources */,
 			);
@@ -197,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0601DE1C22383C1E00CFBDE3 /* DynamicTableViewCell.swift in Sources */,
 				0601DDFA2238323B00CFBDE3 /* ViewController.swift in Sources */,
 				0601DDF82238323B00CFBDE3 /* AppDelegate.swift in Sources */,
 			);
