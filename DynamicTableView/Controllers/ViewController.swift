@@ -25,26 +25,35 @@ class ViewController: UIViewController {
         registerDynamicTableViewCell()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = UITableView.automaticDimension
     }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func registerDynamicTableViewCell() {
-        let cell = UINib(nibName: "DynamicTableViewCell", bundle: nil)
-        tableView.register(cell, forCellReuseIdentifier: "DynamicTableViewCell")
+        let cell = UINib(nibName: "LabelCell", bundle: nil)
+        tableView.register(cell, forCellReuseIdentifier: "LabelCell")
+        
+        let dogImageCell = UINib(nibName: "ImageCell", bundle: nil)
+        tableView.register(dogImageCell, forCellReuseIdentifier: "ImageCell")
+        
     }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return wordArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DynamicTableViewCell", for: indexPath) as? DynamicTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath) as? DynamicTableViewCell else {
             fatalError("Fatal error: No cell")
         }
 
         cell.wordLabel.text = wordArray[indexPath.row]
+        print(cell.wordLabel.text!)
+        print(cell.contentView.bounds.size.height)
         let hiddenWord = "lazy"
         
         cell.hideCellWith(word: hiddenWord)
@@ -61,7 +70,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        //print("textIsHidden: \(textIsHidden)")
         return textIsHidden ? 0 : 50
+        //return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+        //return 50
     }
 }
 

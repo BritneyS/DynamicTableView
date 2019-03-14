@@ -14,7 +14,8 @@
 		0601DE022238323C00CFBDE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0601DE002238323C00CFBDE3 /* LaunchScreen.storyboard */; };
 		0601DE0D2238323C00CFBDE3 /* DynamicTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0601DE0C2238323C00CFBDE3 /* DynamicTableViewTests.swift */; };
 		0601DE1C22383C1E00CFBDE3 /* DynamicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0601DE1A22383C1E00CFBDE3 /* DynamicTableViewCell.swift */; };
-		0601DE1D22383C1E00CFBDE3 /* DynamicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0601DE1B22383C1E00CFBDE3 /* DynamicTableViewCell.xib */; };
+		0601DE1D22383C1E00CFBDE3 /* LabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0601DE1B22383C1E00CFBDE3 /* LabelCell.xib */; };
+		0601DE1F223ADCAA00CFBDE3 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0601DE1E223ADCAA00CFBDE3 /* ImageCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,8 @@
 		0601DE0C2238323C00CFBDE3 /* DynamicTableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicTableViewTests.swift; sourceTree = "<group>"; };
 		0601DE0E2238323C00CFBDE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0601DE1A22383C1E00CFBDE3 /* DynamicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicTableViewCell.swift; sourceTree = "<group>"; };
-		0601DE1B22383C1E00CFBDE3 /* DynamicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DynamicTableViewCell.xib; sourceTree = "<group>"; };
+		0601DE1B22383C1E00CFBDE3 /* LabelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelCell.xib; sourceTree = "<group>"; };
+		0601DE1E223ADCAA00CFBDE3 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				0601DE1A22383C1E00CFBDE3 /* DynamicTableViewCell.swift */,
-				0601DE1B22383C1E00CFBDE3 /* DynamicTableViewCell.xib */,
+				0601DE1B22383C1E00CFBDE3 /* LabelCell.xib */,
+				0601DE1E223ADCAA00CFBDE3 /* ImageCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -208,8 +211,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0601DE022238323C00CFBDE3 /* LaunchScreen.storyboard in Resources */,
-				0601DE1D22383C1E00CFBDE3 /* DynamicTableViewCell.xib in Resources */,
+				0601DE1D22383C1E00CFBDE3 /* LabelCell.xib in Resources */,
 				0601DDFF2238323C00CFBDE3 /* Assets.xcassets in Resources */,
+				0601DE1F223ADCAA00CFBDE3 /* ImageCell.xib in Resources */,
 				0601DDFD2238323B00CFBDE3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="205" id="U1Y-ry-iUe" customClass="DynamicTableViewCell" customModule="DynamicTableView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="397" height="205"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U1Y-ry-iUe" id="bXd-OP-FiJ">
+                <rect key="frame" x="0.0" y="0.0" width="397" height="204.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="help-dog" translatesAutoresizingMaskIntoConstraints="NO" id="zNg-Ls-dmC">
+                        <rect key="frame" x="20" y="11" width="357" height="183"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="zNg-Ls-dmC" firstAttribute="top" secondItem="bXd-OP-FiJ" secondAttribute="topMargin" id="2Wv-AI-gJh"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="zNg-Ls-dmC" secondAttribute="trailing" id="Gjq-HC-YOh"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="zNg-Ls-dmC" secondAttribute="bottom" id="pG7-tB-qwe"/>
+                    <constraint firstItem="zNg-Ls-dmC" firstAttribute="leading" secondItem="bXd-OP-FiJ" secondAttribute="leadingMargin" id="vsC-hP-5VL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="dogImage" destination="zNg-Ls-dmC" id="qWP-NW-QbV"/>
+            </connections>
+            <point key="canvasLocation" x="167.19999999999999" y="22.03898050974513"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="help-dog" width="1600" height="1200"/>
+    </resources>
+</document>
