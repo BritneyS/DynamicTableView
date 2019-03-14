@@ -12,4 +12,11 @@ class DynamicTableViewCell: UITableViewCell {
 
     @IBOutlet weak var wordLabel: UILabel!
     
+    func hideCellWith(word: String) {
+        if wordLabel.text == word {
+            isHidden = true
+        } else {
+            isHidden = false
+        }
+    }
 }
