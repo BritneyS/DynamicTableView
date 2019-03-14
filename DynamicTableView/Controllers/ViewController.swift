@@ -49,10 +49,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.hideCellWith(word: hiddenWord)
         if cell.isHidden == true {
+            textIsHidden = true
             wordArray.remove(at: indexPath.row)
             let indexPath = IndexPath(index: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .none)
-            textIsHidden = true
         } else {
             textIsHidden = false
         }
