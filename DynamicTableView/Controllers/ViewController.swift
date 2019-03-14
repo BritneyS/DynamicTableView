@@ -12,9 +12,13 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var wordArray: [String] {
-        return "The quick brown fox jumps over the lazy dog".components(separatedBy: .whitespaces).map { $0 }
+    var wordArray = "The quick brown fox jumps over the lazy dog".components(separatedBy: .whitespaces).map { $0 } {
+        didSet {
+            tableView.reloadData()
+        }
     }
+    
+    var textIsHidden = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,11 +43,25 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "DynamicTableViewCell", for: indexPath) as? DynamicTableViewCell else {
             fatalError("Fatal error: No cell")
         }
-        
+
         cell.wordLabel.text = wordArray[indexPath.row]
+        let hiddenWord = "lazy"
+        
+        cell.hideCellWith(word: hiddenWord)
+        if cell.isHidden == true {
+            textIsHidden = true
+            wordArray.remove(at: indexPath.row)
+            let indexPath = IndexPath(index: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .none)
+        } else {
+            textIsHidden = false
+        }
+        
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return textIsHidden ? 0 : 50
+    }
 }
 
