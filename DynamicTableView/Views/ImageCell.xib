@@ -14,12 +14,16 @@
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="205" id="U1Y-ry-iUe" customClass="DynamicTableViewCell" customModule="DynamicTableView" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="397" height="205"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U1Y-ry-iUe" id="bXd-OP-FiJ">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U1Y-ry-iUe" id="bXd-OP-FiJ">
                 <rect key="frame" x="0.0" y="0.0" width="397" height="204.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="help-dog" translatesAutoresizingMaskIntoConstraints="NO" id="zNg-Ls-dmC">
-                        <rect key="frame" x="20" y="11" width="357" height="183"/>
+                        <rect key="frame" x="20" y="11" width="360" height="200"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="200" id="Zpn-3I-Tlb"/>
+                            <constraint firstAttribute="width" constant="360" id="nQa-XY-hyy"/>
+                        </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
