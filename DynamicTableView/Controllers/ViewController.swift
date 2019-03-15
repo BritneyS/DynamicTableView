@@ -18,15 +18,13 @@ class ViewController: UIViewController {
         }
     }
     
-    var textIsHidden = false
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         registerDynamicTableViewCell()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 100
     }
 }
 
@@ -47,37 +45,23 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath) as? DynamicTableViewCell else {
-            fatalError("Fatal error: No cell")
-        }
-
-        cell.wordLabel.text = wordArray[indexPath.row]
-        print(cell.wordLabel.text!)
-        print(cell.contentView.bounds.size.height)
-        let hiddenWord = "lazy"
-        
-        cell.hideCellWith(word: hiddenWord)
-        if cell.isHidden == true {
-            textIsHidden = true
-            wordArray.remove(at: indexPath.row)
-            let indexPath = IndexPath(index: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .none)
+        if wordArray[indexPath.row] == "dog" {
+            guard let imageCell = tableView.dequeueReusableCell(withIdentifier: "ImageCell", for: indexPath) as? DynamicTableViewCell else { fatalError("Fatal error: No image cell") }
+            return imageCell
         } else {
-            textIsHidden = false
+            guard let labelCell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath) as? DynamicTableViewCell else { fatalError("Fatal error: No label cell") }
+            labelCell.wordLabel.text = wordArray[indexPath.row]
+            let hiddenWord = "lazy"
+            if wordArray[indexPath.row] == hiddenWord {
+                wordArray.remove(at: indexPath.row)
+                let indexPath = IndexPath(index: indexPath.row)
+                tableView.performBatchUpdates(({
+                    tableView.deleteRows(at: [indexPath], with: .none)
+                    tableView.reloadRows(at: [indexPath], with: .none)
+                }), completion: nil)
+            }
+            return labelCell
         }
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        //print("textIsHidden: \(textIsHidden)")
-        return textIsHidden ? 0 : 50
-        //return UITableView.automaticDimension
-    }
-    
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
-        //return 50
     }
 }
 

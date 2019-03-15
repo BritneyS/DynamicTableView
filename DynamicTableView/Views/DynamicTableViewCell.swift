@@ -18,15 +18,4 @@ class DynamicTableViewCell: UITableViewCell {
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var dogImage: UIImageView!
     
-    func hideCellWith(word: String) {
-        if wordLabel.text == word {
-            isHidden = true
-        } else {
-            isHidden = false
-        }
-    }
-    
-    func assignDogPictureToImageView() {
-        
-    }
 }
