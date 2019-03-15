@@ -14,23 +14,28 @@
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="205" id="U1Y-ry-iUe" customClass="DynamicTableViewCell" customModule="DynamicTableView" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="397" height="205"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U1Y-ry-iUe" id="bXd-OP-FiJ">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U1Y-ry-iUe" id="bXd-OP-FiJ">
                 <rect key="frame" x="0.0" y="0.0" width="397" height="204.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="help-dog" translatesAutoresizingMaskIntoConstraints="NO" id="zNg-Ls-dmC">
-                        <rect key="frame" x="20" y="11" width="360" height="200"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="200" id="Zpn-3I-Tlb"/>
-                            <constraint firstAttribute="width" constant="360" id="nQa-XY-hyy"/>
-                        </constraints>
-                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Acy-dY-dgR">
+                        <rect key="frame" x="8" y="8" width="381" height="188.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" image="help-dog" translatesAutoresizingMaskIntoConstraints="NO" id="zNg-Ls-dmC">
+                                <rect key="frame" x="0.0" y="0.0" width="381" height="188.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" priority="750" constant="381" id="HME-Hb-4LG"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="188.5" id="n5o-7i-Naw"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                    </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="zNg-Ls-dmC" firstAttribute="top" secondItem="bXd-OP-FiJ" secondAttribute="topMargin" id="2Wv-AI-gJh"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="zNg-Ls-dmC" secondAttribute="trailing" id="Gjq-HC-YOh"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="zNg-Ls-dmC" secondAttribute="bottom" id="pG7-tB-qwe"/>
-                    <constraint firstItem="zNg-Ls-dmC" firstAttribute="leading" secondItem="bXd-OP-FiJ" secondAttribute="leadingMargin" id="vsC-hP-5VL"/>
+                    <constraint firstAttribute="trailing" secondItem="Acy-dY-dgR" secondAttribute="trailing" constant="8" id="4NX-gy-YuZ"/>
+                    <constraint firstItem="Acy-dY-dgR" firstAttribute="leading" secondItem="bXd-OP-FiJ" secondAttribute="leading" constant="8" id="ES8-vB-8hT"/>
+                    <constraint firstAttribute="bottom" secondItem="Acy-dY-dgR" secondAttribute="bottom" constant="8" id="mDK-0V-1Bd"/>
+                    <constraint firstItem="Acy-dY-dgR" firstAttribute="top" secondItem="bXd-OP-FiJ" secondAttribute="top" constant="8" id="ozQ-m5-TFI"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
