@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="205" id="U1Y-ry-iUe" customClass="DynamicTableViewCell" customModule="DynamicTableView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="397" height="205"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U1Y-ry-iUe" id="bXd-OP-FiJ">
+                <rect key="frame" x="0.0" y="0.0" width="397" height="204.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Acy-dY-dgR">
+                        <rect key="frame" x="8" y="8" width="381" height="188.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" image="help-dog" translatesAutoresizingMaskIntoConstraints="NO" id="zNg-Ls-dmC">
+                                <rect key="frame" x="0.0" y="0.0" width="381" height="188.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" priority="750" constant="381" id="HME-Hb-4LG"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="188.5" id="n5o-7i-Naw"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Acy-dY-dgR" secondAttribute="trailing" constant="8" id="4NX-gy-YuZ"/>
+                    <constraint firstItem="Acy-dY-dgR" firstAttribute="leading" secondItem="bXd-OP-FiJ" secondAttribute="leading" constant="8" id="ES8-vB-8hT"/>
+                    <constraint firstAttribute="bottom" secondItem="Acy-dY-dgR" secondAttribute="bottom" constant="8" id="mDK-0V-1Bd"/>
+                    <constraint firstItem="Acy-dY-dgR" firstAttribute="top" secondItem="bXd-OP-FiJ" secondAttribute="top" constant="8" id="ozQ-m5-TFI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="dogImage" destination="zNg-Ls-dmC" id="qWP-NW-QbV"/>
+            </connections>
+            <point key="canvasLocation" x="167.19999999999999" y="22.03898050974513"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="help-dog" width="1600" height="1200"/>
+    </resources>
+</document>
